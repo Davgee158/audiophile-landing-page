@@ -25,16 +25,9 @@ const CheckoutPage = () => {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [loading, setLoading] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
-  const { items, setItems } = useCart();
+  const { items } = useCart();
   const { user } = useAuth();
-  const {
-    isCheckoutOpen,
-    setIsCheckoutOpen,
-    isCartOpen,
-    setIsCartOpen,
-    isMenuOpen,
-    setIsMenuOpen,
-  } = useModal();
+  const { isCheckoutOpen, setIsCheckoutOpen, setIsCartOpen, setIsMenuOpen } = useModal();
   const navigate = useNavigate();
 
   // If cart is empty, redirect to home

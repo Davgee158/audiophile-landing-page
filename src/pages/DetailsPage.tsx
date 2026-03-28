@@ -202,7 +202,7 @@ const DetailsPage = () => {
         <div className="mb-16 md:flex lg:flex-col md:gap-48 lg:gap-0 md:mb-24 lg:mb-0">
           <h2 className="text-2xl md:text-4xl font-bold mb-6">IN THE BOX</h2>
           <ul>
-            {productData.includes.map((item, index) => (
+            {productData.includes.map((item: any, index: number) => (
               <li key={index} className="flex items-center gap-6 mb-2 ">
                 <span className="font-bold" style={{ color: "#D87D4A" }}>
                   {item.quantity}x
@@ -216,7 +216,7 @@ const DetailsPage = () => {
 
       <div className="mb-24 mx-8 md:mx-12 lg:mx-24">
         <div className="md:grid md:grid-cols-2 md:gap-6 gap-6 lg:gap-8">
-          {Object.entries(productData.gallery).map(([key, image], index) => (
+          {Object.entries(productData.gallery).map(([key, image]: [string, any], index: number) => (
             <picture key={key} className={index === 1 ? "md:row-span-2 " : ""}>
               <source
                 media="(min-width: 1024px)"
@@ -242,7 +242,7 @@ const DetailsPage = () => {
           YOU MAY ALSO LIKE
         </h2>
         <div className="md:flex md:gap-4 lg:gap-6">
-          {productData.others.map((item, index) => (
+          {productData.others.map((item: any, index: number) => (
             <div key={index} className="mb-12 mt-6">
               <picture>
                 <source
