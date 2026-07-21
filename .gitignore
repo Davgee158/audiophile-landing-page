@@ -20,6 +20,8 @@ dist-ssr
 # Database files
 supabase_migration.sql
 supabase_add_others.sql
+supabase_01_products_table.sql
+supabase_04_rls.sql
 
 # Editor directories and files
 .vscode/*
